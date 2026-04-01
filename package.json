@@ -1,0 +1,12 @@
+{
+  "name": "app",
+  "private": true,
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "build:watch": "node esbuild.config.js --watch"
+  },
+  "dependencies": {
+    "esbuild-plugin-vue": "^0.2.4",
+    "vue": "^3.5.31"
+  }
+}

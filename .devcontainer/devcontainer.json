@@ -1,0 +1,22 @@
+{
+  "name": "Rails Interview Environment",
+  "image": "mcr.microsoft.com/devcontainers/ruby:3.3",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/itsmechlark/features/postgresql:1": {},
+    "ghcr.io/devcontainers-extra/features/redis-homebrew:1": {}
+  },
+  "forwardPorts": [
+    3000
+  ],
+  "onCreateCommand": "sudo apt-get update && sudo apt-get install -y build-essential libpq-dev",
+  "postCreateCommand": "bundle install && rails db:create && rails db:migrate",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "rebornix.Ruby",
+        "shopify.ruby-lsp"
+      ]
+    }
+  }
+}
